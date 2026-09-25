@@ -18,6 +18,7 @@
 <h2 class="site-description sp-part-top sp-catchphrase" id="">息抜きに。</h2>
 <div class="extra sp-part-top sp-site-branding-extra" style="min-height: 20px" id="sp-site-branding-extra-1"></div></div></div></header>
 <div id="main" class="site-main sp-part-top sp-main">
+
 <div id="main-inner">
 <div id="primary" class="content-area">
 <div id="content" class="site-content sp-part-top sp-content page-toppage" role="main">
@@ -26,9 +27,37 @@
 <p style="text-align : left;" class="paragraph"> </p><br><br><br><br><br><br><br>
 <p style="text-align : center;" class="paragraph"> </p>
 <div id="sp-button-1" class="sp-part-top sp-button"><a href="#">password</a></div>
+
+<div style="text-align:center;">
+  <input type="password" id="password" placeholder="パスワード">
+  <button type="button" onclick="togglePassword()">👁</button>
+　<button type="button" onclick="checkPassword()">入る</button>
+  <p id="message"></p>
+</div>
+
+<script> 
+function togglePassword() { 
+  const password = document.getElementById("password");
+
+  if (password.type === "password") {
+    password.type = "text"; 
+  } else {
+    password.type = "password"; 
+  }
+}
+
+function checkPassword() {
+  const password = document.getElementById("password").value;
+  
+  if (password === "8man") {
+    window.location.href = "custom.html";
+  } else {
+    document.getElementById("message").textContent = "パスワードが違います。";
+  }
+}
+</script>
 <p style="text-align : center;" class="paragraph"> </p></div></article></div></div></div></div>
 <footer id="colophon" class="site-footer sp-part-top sp-footer2" role="contentinfo">
 <div id="colophon-inner" class="sp-part-top sp-footer-inner">
 <div id="sp-block-container-1" class="sp-part-top sp-block-container">
-<p class="copyright paragraph" style="text-align : right;">Copyright &copy; Eightman with friends, All rights reserved.<br>
-【掲載の記事・写真・イラストなどの無断複写・転載を禁じます】</p></div></div></footer></div><script type="text/javascript" src="navigation.js"></script></body></html>
+<p class="copyright paragraph" style="text-align : right;">Copyright &copy; Eightman with friends, All rights reserved.</p></div></div></footer></div><script type="text/javascript" src="navigation.js"></script></body></html>
